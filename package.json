@@ -1,0 +1,9 @@
+{
+  "name": "ghost-ide-download",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ghost IDE download site — live GitHub releases, Three.js backdrop, GSAP animations",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

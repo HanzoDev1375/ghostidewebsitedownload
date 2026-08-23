@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ghost IDE — Download</title>
+<meta name="description" content="Download Ghost IDE — the open-source Android IDE with LSP, syntax highlighting and a plugin system. Always the latest release, straight from GitHub.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0e14">
+<meta property="og:title" content="Ghost IDE — Download">
+<meta property="og:description" content="Open-source Android IDE. Get the latest release automatically.">
+<link rel="icon" type="image/png" href="assets/img/icon-192.png">
+<link rel="apple-touch-icon" href="assets/img/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+  }
+}
+</script>
+</head>
+<body dir="rtl">
+<canvas id="bg3d" aria-hidden="true"></canvas>
+
+<a href="#mainContent" class="skip-link">رفتن به محتوا</a>
+
+<header class="topbar">
+  <a class="brand" href="#mainContent">
+    <span class="brand__mark"><img src="assets/img/icon-192.png" alt="Ghost IDE"></span>
+    <span class="brand__name"><b>Ghost IDE</b><small data-i18n="brandSub">Download</small></span>
+  </a>
+
+  <div class="topbar__actions">
+    <a class="icon-btn" id="docsLink" href="https://hanzodev1375.github.io/plugin-doc-ghost-ide/" target="_blank" rel="noopener" aria-label="Docs">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+    </a>
+    <a class="icon-btn" id="githubLink" href="https://github.com/HanzoDev1375/GhostIdes" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 1.8a10.3 10.3 0 0 0-3.26 20.07c.52.1.7-.22.7-.49v-1.9c-2.86.62-3.47-1.2-3.47-1.2-.47-1.19-1.14-1.5-1.14-1.5-.94-.64.07-.63.07-.63 1.03.08 1.57 1.06 1.57 1.06.92 1.58 2.42 1.12 3 .86.1-.67.36-1.13.66-1.39-2.29-.26-4.69-1.14-4.69-5.08 0-1.12.4-2.04 1.05-2.76-.1-.26-.46-1.3.1-2.71 0 0 .87-.28 2.83 1.05a9.84 9.84 0 0 1 5.16 0c1.96-1.33 2.82-1.05 2.82-1.05.57 1.41.21 2.45.11 2.71.65.72 1.04 1.64 1.04 2.76 0 3.95-2.4 4.81-4.7 5.07.37.32.7.94.7 1.9v2.82c0 .27.18.6.71.49A10.3 10.3 0 0 0 12 1.8Z"/></svg>
+    </a>
+    <div class="langswitch">
+      <button type="button" id="langFa">FA</button>
+      <button type="button" id="langEn">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="mainContent">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__eyebrow"><span class="pulse-dot"></span><span data-i18n="openSource">متن‌باز · GPLv3 · ساخته‌شده برای اندروید</span></div>
+
+      <h1 id="heroTitle"><span data-i18n="heroTitle1">کد بزن</span> <em data-i18n="heroTitleEm">همین‌جا</em><span data-i18n="heroTitle2">، روی گوشی خودت.</span></h1>
+      <p class="lead" data-i18n="lead">Ghost IDE یک محیط توسعه‌ی کامل اندروید است؛ با ویرایشگر هوشمند، سرور LSP، هایلایت سینتکس و سیستم پلاگین .gpl — همه در یک اپ.</p>
+
+      <div class="dlcard" id="dlcard">
+        <div class="dlcard__glow" aria-hidden="true"></div>
+        <div class="dlcard__head">
+          <img class="dlcard__logo" src="assets/img/icon-192.png" alt="">
+          <div class="dlcard__meta">
+            <div class="dlcard__name">Ghost IDE <span class="verpill" id="verPill"><span class="spinner"></span></span></div>
+            <div class="dlcard__sub mono" id="dlMeta">&nbsp;</div>
+          </div>
+        </div>
+
+        <div class="dlcard__actions">
+          <a class="btn btn-primary btn-big" id="btnDl" href="https://github.com/HanzoDev1375/GhostIdes/releases/latest" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="6.5 10.5 12 16 17.5 10.5"/><path d="M4 19.5h16"/></svg>
+            <span data-i18n="downloadLatest">دانلود آخرین نسخه</span>
+          </a>
+          <a class="btn btn-ghost" id="btnAllReleases" href="#releases" data-i18n="allReleases">همه‌ی ریلیزها</a>
+        </div>
+
+        <div class="dlcard__hash mono" id="shaRow" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="9.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+          <span id="shaText"></span>
+          <button type="button" class="copy-btn" id="shaCopy" aria-label="copy sha256">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M5.5 15.5h-1a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat"><b class="mono" data-stat="version">—</b><span data-i18n="statVersion">آخرین نسخه</span></div>
+        <div class="stat"><b class="mono" data-stat="downloads">—</b><span data-i18n="statDownloads">کل دانلودها</span></div>
+        <div class="stat"><b class="mono" data-stat="stars">—</b><span data-i18n="statStars">ستاره‌ها</span></div>
+        <div class="stat"><b class="mono" data-stat="size">—</b><span data-i18n="statSize">حجم نصب</span></div>
+      </div>
+    </div>
+
+    <div class="orbwrap" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+    </div>
+  </section>
+
+  <!-- ======================= FEATURES ======================= -->
+  <section class="features" id="features">
+    <h2 class="sect-title" data-i18n="featuresTitle">چرا Ghost IDE؟</h2>
+    <div class="featgrid" id="featGrid"></div>
+  </section>
+
+  <!-- ======================= RELEASES ======================= -->
+  <section class="releases" id="releases">
+    <div class="sect-head">
+      <h2 class="sect-title" data-i18n="releasesTitle">ریلیزها</h2>
+      <a class="rsslink mono" id="releasesRss" href="https://github.com/HanzoDev1375/GhostIdes/releases.atom" target="_blank" rel="noopener">ATOM</a>
+    </div>
+    <p class="sect-dek" data-i18n="releasesDek">این لیست مستقیم از GitHub API خوانده می‌شود — هر ریلیز جدیدی که منتشر کنی همین‌جا خودکار ظاهر می‌شود.</p>
+    <div class="timeline" id="timeline">
+      <div class="tl-skeleton">
+        <div class="sk sk-line w40"></div><div class="sk sk-card"></div>
+        <div class="sk sk-line w30"></div><div class="sk sk-card"></div>
+        <div class="sk sk-line w35"></div><div class="sk sk-card"></div>
+      </div>
+    </div>
+    <noscript><div class="note warn">برای دیدن لیست زنده‌ی ریلیزها جاوااسکریپت را فعال کنید یا مستقیم به <a href="https://github.com/HanzoDev1375/GhostIdes/releases">GitHub Releases</a> بروید.</div></noscript>
+  </section>
+
+  <!-- ======================= INSTALL STEPS ======================= -->
+  <section class="install" id="install">
+    <h2 class="sect-title" data-i18n="installTitle">نصب</h2>
+    <ol class="steps" id="stepsList"></ol>
+  </section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="foot-links">
+    <a href="https://github.com/HanzoDev1375/GhostIdes" target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">·</span>
+    <a href="https://hanzodev1375.github.io/plugin-doc-ghost-ide/" target="_blank" rel="noopener" data-i18n="footDocs">مستندات پلاگین</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/HanzoDev1375/GhostIdes/releases.atom" target="_blank" rel="noopener">Releases&nbsp;ATOM</a>
+  </div>
+  <div class="foot-note mono">GPL-3.0 © <span id="year"></span> HanzoDev1375</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script type="module" src="assets/js/three-bg.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
